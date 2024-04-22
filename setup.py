@@ -74,7 +74,7 @@ with open(os.path.join(PROJECT_DIR, 'README.rst'), encoding="utf-8") as fh:
         '^.. start-no-pypi.*^.. end-no-pypi', '', fh.read(), flags=re.M | re.S)
 
 setup(
-    name='django-oscar',
+    name='oscar',
     version=get_version(),
     url='https://github.com/django-oscar/django-oscar',
     author="David Winterbottom",
@@ -87,6 +87,8 @@ setup(
     include_package_data=True,
     python_requires='>=3.8',
     install_requires=install_requires,
+    package_dir = {"": "src"},
+    packages=["oscar"],
     extras_require={
         'docs': docs_requires,
         'test': test_requires,
