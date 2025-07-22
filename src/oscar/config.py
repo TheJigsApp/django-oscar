@@ -16,7 +16,7 @@ class Shop(OscarConfig):
         from django.contrib.auth.forms import SetPasswordForm
         import oscar.checks  # pylint: disable=W0611
 
-        self.catalogue_app = apps.get_app_config("catalogue")
+        self.catalogue_app = apps.get_app_config("catalog")
         self.customer_app = apps.get_app_config("customer")
         self.basket_app = apps.get_app_config("basket")
         self.checkout_app = apps.get_app_config("checkout")
